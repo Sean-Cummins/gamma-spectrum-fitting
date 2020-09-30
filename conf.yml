@@ -1,0 +1,373 @@
+Detectors:
+  BGO:
+    Geometry: 
+      Shape: 'Cylinder'
+      Dimensions: # cm
+        Diameter: 5.08
+        Height: 5.08
+    Sources: 
+      Cs:
+        SourceDetectorSeparation: 0.15 #[m]
+        CalibrationActivity: 11.16 #[uCi]
+        CalibrationActivityError: 0.423 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 30.17 #[yrs]
+        HalfLifeError: 0.03 #[yrs]        
+        Peaks:
+          "1":
+            Energy: 661.657
+            DecayFraction: 0.851
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [300, 500]
+              Method: 'BFGS'
+      Ba: 
+        SourceDetectorSeparation: 0.15 #[m]
+        CalibrationActivity: 11.42 #[uCi]
+        CalibrationActivityError: 0.548 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 10.51 #[yrs]
+        HalfLifeError: 0.05 #[yrs]
+        Peaks:
+          "1":
+            Energy: 302.8508
+            DecayFraction: 0.1833
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [160, 180]
+              Method: 'least_squares'
+              FitWith: ['2']
+          "2":
+            Energy: 356.0129
+            DecayFraction: 0.6205
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [210, 280]
+              Method: 'least_squares'
+              FitWith: ['1']
+      Co: 
+        SourceDetectorSeparation: 0.15 #[m]
+        CalibrationActivity: 12.28 #[uCi]
+        CalibrationActivityError: 0.233 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 5.2714 #[yrs]
+        HalfLifeError: 0.0005 #[yrs]
+        Peaks:
+          "1":
+            Energy: 1173.228
+            DecayFraction: 0.999
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [600, 725]
+              Method: 'least_squares'
+              FitWith: ['2']
+          "2":
+            Energy: 1332.501
+            DecayFraction: 0.9998
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [750, 950]
+              Method: 'least_squares'
+              FitWith: ['1']
+      Am:  
+        SourceDetectorSeparation: 0.15 #[m]     
+        CalibrationActivity: 11.16 #[uCi]
+        CalibrationActivityError: 0.558 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 432.2 #[yrs]
+        HalfLifeError: 0.7
+        Peaks:
+          "1":
+            Energy: 26.3446
+            DecayFraction: 0.024
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [5, 15]
+              Method: 'BFGS'
+              FitWith: ['2']
+          "2":
+            Energy: 59.5409
+            DecayFraction: 0.359
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [15,50]
+              Method: 'BFGS'
+              FitWith: ['1']
+  HPGe:
+    Geometry: 
+      Shape: 'Cylinder'
+      Dimensions: # cm
+        Diameter: 5.0
+        Height: 6.01
+    Sources: 
+      Cs:
+        SourceDetectorSeparation: 0.20 #[m]
+        CalibrationActivity: 12.41 #[uCi]
+        CalibrationActivityError: 0.456 #[uCi]
+        CalibrationTime: '1979-2-1-12' 
+        HalfLife: 11.16 #[yrs]
+        HalfLifeError: 0.03 #[yrs]      
+        Peaks:
+          "1":
+            Energy: 661.657
+            DecayFraction: 0.851
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [2570, 2610]
+              Method: 'BFGS'
+      Ba:
+        SourceDetectorSeparation: 0.20 #[m]
+        CalibrationActivity: 10.82 #[uCi]
+        CalibrationActivityError: 0.512 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 10.51 #[yrs]
+        HalfLifeError: 0.05 #[yrs]
+        Peaks:
+          "1":
+            Energy: 80.9971
+            DecayFraction: 0.34
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [305, 330]     
+              Method: 'least_squares' 
+          "2":
+            Energy: 276.3989
+            DecayFraction: 0.0716
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [1070, 1100]     
+              Method: 'least_squares'              
+          "3":
+            Energy: 302.8508
+            DecayFraction: 0.1833
+            Fitting:
+              Model: 'Gaussian' 
+              ChannelRange: [1170, 1200]    
+              Method: 'least_squares'        
+          "4":
+            Energy: 356.0129
+            DecayFraction: 0.6205
+            Fitting:
+              Model: 'Gaussian' 
+              ChannelRange: [1380, 1410]
+              Method: 'least_squares'
+          "5":
+            Energy: 383.851
+            DecayFraction: 0.0894
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [1490, 1520]     
+              Method: 'least_squares'   
+      Co: 
+        SourceDetectorSeparation: 0.20 #[m]
+        CalibrationActivity: 11.32 #[uCi]
+        CalibrationActivityError: 0.215 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 5.2714 #[yrs]
+        HalfLifeError: 0.0005 #[yrs]
+        Peaks:
+          "1":
+            Energy: 1173.228
+            DecayFraction: 0.999
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [4580, 4620]
+              Method: 'least_squares'
+          "2":
+            Energy: 1332.501
+            DecayFraction: 0.9998
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [5200, 5240]
+              Method: 'least_squares'
+      Am: 
+        SourceDetectorSeparation: 0.20 #[m]
+        CalibrationActivity: 11.16 #[uCi]
+        CalibrationActivityError: 0.558 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 432.2 #[yrs]
+        HalfLifeError: 0.7
+        Peaks:
+          "1":
+            Energy: 59.5409
+            DecayFraction: 0.359
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [215, 245]
+              Method: 'BFGS'
+          "2":
+            Energy: 26.3448
+            DecayFraction: 0.024
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [90, 120]
+              Method: 'BFGS'
+  NaI:
+    Geometry: 
+      Shape: 'Cylinder'
+      Dimensions: # cm
+        Diameter: 5.08
+        Height: 5.08
+    Sources: 
+      Cs:
+        SourceDetectorSeparation: 0.15 #[m]
+        CalibrationActivity: 11.16 #[uCi]
+        CalibrationActivityError: 0.423 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 30.17 #[yrs]
+        HalfLifeError: 0.03 #[yrs]    
+        Peaks:
+          "1":
+            Energy: 661.657 
+            DecayFraction: 0.851
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [180, 240]
+              Method: 'least_squares'
+      Ba:
+        SourceDetectorSeparation: 0.15 #[m]
+        CalibrationActivity: 11.42 #[uCi]
+        CalibrationActivityError: 0.548 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 10.51 #[yrs]
+        HalfLifeError: 0.05 #[yrs]
+        Peaks:
+          "1":
+            Energy: 302.8508
+            DecayFraction: 0.1833
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [90, 115]
+              Method: 'least_squares'
+              FitWith: ['2']
+          "2":
+            Energy: 356.0129
+            DecayFraction: 0.6205
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [90,140]
+              Method: 'least_squares'
+              FitWith: ['1']
+      Co: 
+        SourceDetectorSeparation: 0.15 #[m]
+        CalibrationActivity: 12.28 #[uCi]
+        CalibrationActivityError: 0.233 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 5.2714 #[yrs]
+        HalfLifeError: 0.0005 #[yrs]
+        Peaks:
+          "1":
+            Energy: 1173.228
+            DecayFraction: 0.999
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [340, 400]
+              Method: 'least_squares'
+              FitWith: ['2']
+          "2":
+            Energy: 1332.501
+            DecayFraction: 0.9998
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [380, 460]
+              Method: 'least_squares'
+              FitWith: ['1']
+      Am:
+        SourceDetectorSeparation: 0.15 #[m] 
+        CalibrationActivity: 11.16 #[uCi]
+        CalibrationActivityError: 0.558 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 432.2 #[yrs]
+        HalfLifeError: 0.7
+        Peaks:
+          "1":
+            Energy: 59.5409
+            DecayFraction: 0.359  
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [17, 30]
+              Method: 'least_squares'
+  CdTe:
+    Geometry: 
+      Shape: 'Cuboid'
+      Dimensions: # cm
+        Length: 0.5
+        Width: 0.5
+        Depth: 0.1
+    Sources: 
+      Cs:
+        SourceDetectorSeparation: 0.10 #[m]
+        CalibrationActivity: 11.16 #[uCi]
+        CalibrationActivityError: 0.423 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 30.17 #[yrs]
+        HalfLifeError: 0.03 #[yrs]  
+        Peaks:
+          "1":
+            Energy: 661.657
+            DecayFraction: 0.851
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [180, 240]
+              Method: 'BFGS'
+      Ba:
+        SourceDetectorSeparation: 0.10 #[m]
+        CalibrationActivity: 11.42 #[uCi]
+        CalibrationActivityError: 0.548 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 10.51 #[yrs]
+        HalfLifeError: 0.05 #[yrs]
+        Peaks:
+          "1":
+            Energy: 302.8508
+            DecayFraction: 0.1833
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [700, 900]
+              Method: 'BFGS'
+              FitWith: ['2']
+          "2":
+            Energy: 356.0129
+            DecayFraction: 0.6205
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [825, 900]
+              Method: 'BFGS'
+              FitWith: ['1']
+      Co:
+        SourceDetectorSeparation: 0.10 #[m]
+        CalibrationActivity: 12.28 #[uCi]
+        CalibrationActivityError: 0.233 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 5.2714 #[yrs]
+        HalfLifeError: 0.0005 #[yrs]
+        Peaks:
+          "1":
+            Energy: 1173.228
+            DecayFraction: 0.999
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [320, 375]
+              Method: 'least_squares'
+          "2":
+            Energy: 1332.501
+            DecayFraction: 0.9998
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [375, 420]
+              Method: 'least_squares'
+      Am: 
+        SourceDetectorSeparation: 0.10 #[m]
+        CalibrationActivity: 11.16 #[uCi]
+        CalibrationActivityError: 0.558 #[uCi]
+        CalibrationTime: '1979-11-1-12' 
+        HalfLife: 432.2 #[yrs]
+        HalfLifeError: 0.7
+        Peaks:
+          "1":
+            Energy: 59.5409
+            DecayFraction: 0.359 
+            Fitting:
+              Model: 'Gaussian'
+              ChannelRange: [1620, 1670]
+              Method: 'BFGS'

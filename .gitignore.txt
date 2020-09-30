@@ -1,0 +1,14 @@
+_pycache_\
+
+# output directories
+analysis\
+plots\
+
+# directory for future tui
+tui\
+
+# ignore log files
+*.log
+
+# ignore csv files
+*.csv 
